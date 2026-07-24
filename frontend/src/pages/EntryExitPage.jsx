@@ -94,10 +94,8 @@ export default function EntryExitPage({ data, updateData, goTo })
     <div className="panel">
       <h1 className="panel__title">Mark Entry / Exit</h1>
       <PlateChip value={data.licensePlate} />
-
       {error && <div className="error-banner">{error}</div>}
       {message && <p className="panel__hint">{message}</p>}
-
       <div className="field">
         <label htmlFor="spot-select">Available Spots</label>
         <select id="spot-select" value={occupiedSpot ? `occupied-${occupiedSpot}` : selectedKey}

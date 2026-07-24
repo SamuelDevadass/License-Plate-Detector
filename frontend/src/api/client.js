@@ -56,6 +56,8 @@ export const Api =
 
   stopDetection: () => request("/detection/stop", { method: "POST" }),
 
+  video_feed: () => request("/video",),
+
   getVehicle: (licensePlate) => request(`/vehicles/${encodeURIComponent(licensePlate)}`),
 
   saveVehicle: (payload) =>

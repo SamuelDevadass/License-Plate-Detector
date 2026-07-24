@@ -58,3 +58,9 @@ def stop_detection():
 
 def get_status() -> dict:
     return dict(_state)
+
+def get_live_frame() -> bytes | None:
+    global _detector
+    if _detector is None or _state['status'] != 'running':
+        return None
+    return _detector.get_frame_bytes()

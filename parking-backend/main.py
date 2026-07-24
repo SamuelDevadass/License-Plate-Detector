@@ -7,7 +7,7 @@ Run with:  uvicorn main:app --reload --port 8000"""
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from routers import wings, spots, detection, vehicles_entry_exit, bills
+from routers import wings, spots, detection, vehicles_entry_exit, bills, video
 from dotenv import load_dotenv
 import os
 load_dotenv("./.env")
@@ -46,3 +46,8 @@ app.include_router(vehicles_entry_exit.router)
 # Billing
 # ---------------------------------------------------------------------------
 app.include_router(bills.router)
+
+# ---------------------------------------------------------------------------
+# Video Feed
+# ---------------------------------------------------------------------------
+app.include_router(video.router)

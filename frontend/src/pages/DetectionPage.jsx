@@ -84,6 +84,21 @@ export default function DetectionPage({ data, updateData, goTo })
         <span className={`status-dot ${running ? "status-dot--running" : ""}`} />
         {running ? "Detection running…" : "Idle"}
       </div>
+      {running && (
+  <div className="field">
+    <label>Live Camera Feed</label>
+    <img
+      src="http://localhost:8000/api/video"
+      alt="Live Detection Feed"
+      style={{
+        width: "100%",
+        maxWidth: "640px",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+      }}
+    />
+  </div>
+)}
       <div className="btn-row">
         <button className="btn btn--primary" onClick={startDetection} disabled={running}>
           Start Detection

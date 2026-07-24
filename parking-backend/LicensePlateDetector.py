@@ -8,6 +8,8 @@ import numpy as np
 from rapidocr_onnxruntime import RapidOCR
 import easyocr
 from ultralytics import YOLO
+import threading
+import time
 
 class LicensePlateDetection:
 
@@ -18,6 +20,8 @@ class LicensePlateDetection:
         self.yolo_model = YOLO("yolo26n.pt")
         self.folder_path = None
         self.camera = cv2.VideoCapture(0)
+        self.latest_frame = None
+        self.frame_lock = threading.Lock()
 
 
 
@@ -37,6 +41,8 @@ class LicensePlateDetection:
 
         self.camera.release()
         cv2.destroyAllWindows()
+        with self.frame_lock:
+            self.latest_frame = None
 
     def startup_check(self):
         """IMAGE CAPTURE PIPELINE"""
@@ -89,8 +95,10 @@ class LicensePlateDetection:
                         car_x1, car_y1, car_x2, car_y2 = x1, y1, x2, y2
                         cropped_car_capture = frame[car_y1:car_y2, car_x1:car_x2]
 
-            cv2.imshow("YOLO Live Detection Feed", frame)
-
+            #cv2.imshow("YOLO Live Detection Feed", frame)
+            # redirect frames to frontend
+            with self.frame_lock:
+                self.latest_frame = frame.copy()
             # Check if the user pressed the 'q' key to quit
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -121,7 +129,7 @@ class LicensePlateDetection:
         root.mainloop() # wont close until user closes window, root.after sets a timer 
         # Display Car Cropped Capture
 
-    def display_image(self, image_name: str, title: str):
+    def display_image_cv(self, image_name: str, title: str):
         """Display captured image using OpenCV instead of a second Tk root."""
         image_path = os.path.join(self.folder_path, image_name)
         img = cv2.imread(image_path)
@@ -131,6 +139,21 @@ class LicensePlateDetection:
         cv2.imshow(title, img)
         cv2.waitKey(3000)          # shows for 3 seconds
         cv2.destroyWindow(title)
+
+    def display_image(self, image_name: str, title: str):
+            """Display captured image using OpenCV instead of a second Tk root."""
+            image_path = os.path.join(self.folder_path, image_name)
+            img = cv2.imread(image_path)
+            if img is None:
+                print(f"Could not load image for display: {image_path}")
+                return
+            #cv2.imshow(title, img)
+            # forward frames to frontend browser
+            with self.frame_lock:
+                self.latest_frame = img.copy()
+            time.sleep(3)
+            #cv2.waitKey(3000)          # shows for 3 seconds
+            #cv2.destroyWindow(title)
          
     def perform_ocr(self, image_name:str, image_array: Optional[Any] = None):
         """OCR PIPELINE"""
@@ -239,6 +262,15 @@ class LicensePlateDetection:
 class Detector:
     def __init__(self):
         self.License_Plate_Detector = LicensePlateDetection()
+
+    def get_frame_bytes(self):
+            with self.License_Plate_Detector.frame_lock:
+                if self.License_Plate_Detector.latest_frame is None:
+                    return None
+                success, buffer = cv2.imencode(".jpg", self.License_Plate_Detector.latest_frame)
+                if success:
+                    return buffer.tobytes()
+                return None
 
     def start(self, stop_event):
         print("STARTING APPLICATION . . .")
