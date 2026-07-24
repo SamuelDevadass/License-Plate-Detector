@@ -18,34 +18,7 @@ export default function DetectionPage({ data, updateData, goTo })
   // whether it's finished. This replaces the Tkinter combo of a background
   // thread + queue.Queue + self.after(100, poll) — same idea, just over
   // HTTP instead of in-process.
-  useEffect(() => 
-    {
-    if (!running) return;
-    const interval = setInterval(async () => 
-    {
-      try 
-      {
-        const result = await Api.getDetectionStatus();
-        if (result.status === "done") 
-        {
-          updateData({ licensePlate: result.license_plate || "" });
-          setRunning(false);
-        } 
-        else if (result.status === "error") 
-        {
-          setError("Detection failed on the backend.");
-          setRunning(false);
-        }
-      } 
-      catch (err) 
-      {
-        setError(err.message);
-        setRunning(false);
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [running]);
-
+  
   async function startDetection() 
   {
     setError(null);
@@ -60,21 +33,35 @@ export default function DetectionPage({ data, updateData, goTo })
     }
   }
 
-  async function stopDetection() 
-  {
-    try 
-    {
-      await Api.stopDetection();
-    } 
-    catch (err) 
-    {
-      setError(err.message);
-    } 
-    finally 
-    {
-      setRunning(false);
-    }
+  async function stopDetection() {
+  try {
+    await Api.stopDetection();
+
+    const interval = setInterval(async () => {
+      try {
+        const result = await Api.getDetectionStatus();
+
+        if (result.status === "done") {
+          updateData({ licensePlate: result.license_plate || "" });
+          setRunning(false);
+          clearInterval(interval);
+        } else if (result.status === "error") {
+          setError("Detection failed on the backend.");
+          setRunning(false);
+          clearInterval(interval);
+        }
+      } catch (err) {
+        setError(err.message);
+        setRunning(false);
+        clearInterval(interval);
+      }
+    }, 500);
+
+  } catch (err) {
+    setError(err.message);
+    setRunning(false);
   }
+}
 
   return (
     <div className="panel">

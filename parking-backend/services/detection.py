@@ -61,6 +61,6 @@ def get_status() -> dict:
 
 def get_live_frame() -> bytes | None:
     global _detector
-    if _detector is None or _state['status'] != 'running':
+    if _detector is None :
         return None
     return _detector.get_frame_bytes()
