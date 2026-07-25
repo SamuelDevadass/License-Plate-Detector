@@ -41,9 +41,9 @@ Designed to support organizations with multiple centres, wings, floors and spots
                 Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
 Supports comprehensive logging for robust performance
 
-### USER INTERFACE
+### FRONTEND
 
-Implemented using TKinter
+Implemented using React 
 
 Designed to support multiple pages dedicated to specific user activities
     
@@ -53,6 +53,12 @@ Designed to support multiple pages dedicated to specific user activities
         Mark Entry/Exit
         Generate Bill 
 Supports Interactive design for enhanced efficiency
+
+### BACKEND 
+
+Implemented using FastApi 
+
+Designed to support secure REST APIs for backend endpoints 
 
 ### AUTOMATIC LICENSE PLATE DETECTION
 
