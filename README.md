@@ -26,7 +26,7 @@
 
 # FullStack Web Application
 
-STAND ALONE PROTOTYPE APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
+FULLSTACK WEB APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
 
 ### DATABASE
 
@@ -70,6 +70,9 @@ i. Detection happens in the same window
 
 
 ii. Visual depiction of free and occupied spots
+
+
+iii. Occupied slot is pre selected while marking exit 
 
 
 -----------------------------------------------------------------------------------------------------
