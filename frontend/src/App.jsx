@@ -7,18 +7,6 @@ import OwnerDetailsPage from "./pages/OwnerDetailsPage.jsx";
 import EntryExitPage from "./pages/EntryExitPage.jsx";
 import BillingPage from "./pages/BillingPage.jsx";
 
-/*
-  App is the direct equivalent of your ParkingApp(tk.Tk) class:
-  - `data` replaces `self.shared_data` (the dict of tk.StringVars)
-  - `updateData` replaces calling `.set(...)` on those vars
-  - `page` + `goTo` replace `self.show_page(page_name)` / frame.tkraise()
-
-  The big conceptual shift: Tkinter mutated shared_data in place, and
-  widgets bound to it via StringVar updated themselves automatically.
-  React never mutates state in place — updateData always returns a NEW
-  object, and React re-renders whatever reads that state. That's the one
-  habit to build first; everything else in this codebase follows from it.
-*/
 export default function App() 
 {
   const [page, setPage] = useState("wing");
@@ -35,7 +23,6 @@ export default function App()
     folderPath: "",
   });
 
-  // Shallow-merges patch into data, e.g. updateData({ wing: "A" })
   function updateData(patch) 
   {
     setData((prev) => ({ ...prev, ...patch }));
@@ -52,19 +39,17 @@ export default function App()
     <div className="app-shell">
       <header className="app-header">
         <div className="brand">
-        Parking Management System<span> - License Plate Detection</span>
+          Parking Management System<span> - License Plate Detection</span>
         </div>
         <div className="subtitle">Parking Console</div>
       </header>
-
       <StepBar current={page} />
-
-      {page === "wing" && <SelectWingPage {...pageProps} />}
-      {page === "spots" && <EmptySpotsPage {...pageProps} />}
-      {page === "detect" && <DetectionPage {...pageProps} />}
-      {page === "owner" && <OwnerDetailsPage {...pageProps} />}
-      {page === "entry-exit" && <EntryExitPage {...pageProps} />}
-      {page === "billing" && <BillingPage {...pageProps} />}
+        {page === "wing" && <SelectWingPage {...pageProps} />}
+        {page === "spots" && <EmptySpotsPage {...pageProps} />}
+        {page === "detect" && <DetectionPage {...pageProps} />}
+        {page === "owner" && <OwnerDetailsPage {...pageProps} />}
+        {page === "entry-exit" && <EntryExitPage {...pageProps} />}
+        {page === "billing" && <BillingPage {...pageProps} />}
     </div>
   );
 }

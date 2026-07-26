@@ -8,8 +8,6 @@ export default function OwnerDetailsPage({ data, updateData, goTo })
   const [saving, setSaving] = useState(false);
   const [fetching, setFetching] = useState(false);
 
-  // Reset the local form + shared owner/size fields each time this page
-  // is shown, same as Page1.on_show() -> clear_fields().
   useEffect(() => 
   {
     setForm({ model: "", colour: "", phone: "", name: "" });
@@ -29,7 +27,7 @@ export default function OwnerDetailsPage({ data, updateData, goTo })
     {
       const v = await Api.getVehicle(data.licensePlate);
       updateData({ ownerId: v.owner_id ?? "", size: v.type ?? "" });
-      setForm({
+      setForm({ 
         model: v.model ?? "", colour: v.colour ?? "",
         phone: v.phone ?? "", name: v.name ?? "",
       });
@@ -69,29 +67,22 @@ export default function OwnerDetailsPage({ data, updateData, goTo })
   return (
     <div className="panel">
       <h1 className="panel__title">User Details</h1>
-
       {error && <div className="error-banner">{error}</div>}
-
       <div className="field field--mono">
         <label>License Plate</label>
         <input value={data.licensePlate}
-          onChange={(e) => updateData({ licensePlate: e.target.value })}
-        />
+          onChange={(e) => updateData({ licensePlate: e.target.value })}/>
       </div>
-
       <div className="field">
         <label htmlFor="size-select">Vehicle Type</label>
         <select id="size-select" value={data.size}
-          onChange={(e) => updateData({ size: e.target.value, floor: null, spotNumber: null })}
-        >
+          onChange={(e) => updateData({ size: e.target.value, floor: null, spotNumber: null })}>
           <option value="" disabled>
-            Choose…
-          </option>
+            Choose ... </option>
           <option value="Two Wheeler">Two Wheeler</option>
           <option value="Four Wheeler">Four Wheeler</option>
         </select>
       </div>
-
       <div className="field-row">
         <div className="field">
           <label>Model</label>
@@ -102,7 +93,6 @@ export default function OwnerDetailsPage({ data, updateData, goTo })
           <input value={form.colour} onChange={(e) => setField("colour", e.target.value)} />
         </div>
       </div>
-
       <div className="field-row">
         <div className="field">
           <label>Owner ID</label>
@@ -113,28 +103,21 @@ export default function OwnerDetailsPage({ data, updateData, goTo })
           <input value={form.phone} onChange={(e) => setField("phone", e.target.value)} />
         </div>
       </div>
-
       <div className="field">
         <label>Name</label>
         <input value={form.name} onChange={(e) => setField("name", e.target.value)} />
       </div>
-
       <div className="btn-row">
         <button className="btn" onClick={fetchDetails} disabled={fetching}>
-          {fetching ? "Fetching..." : "Fetch Details"}
-        </button>
+          {fetching ? "Fetching..." : "Fetch Details"} </button>
         <button className="btn" onClick={saveDetails} disabled={saving}>
-          {saving ? "Saving…" : "Save Details"}
-        </button>
+          {saving ? "Saving…" : "Save Details"} </button>
       </div>
-
       <div className="btn-row">
         <button className="btn btn--primary" onClick={() => goTo("entry-exit")}>
-          Continue
-        </button>
+          Continue </button>
         <button className="btn btn--primary" onClick={() => goTo("detect")}>
-          Back to Detection
-        </button> 
+          Back to Detection </button> 
       </div>
     </div>
   );

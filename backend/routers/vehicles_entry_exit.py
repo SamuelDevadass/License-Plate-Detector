@@ -17,13 +17,9 @@ def get_vehicle(license_plate: str):
 
 @router.post("/api/vehicles")
 def save_vehicle(payload: VehiclePayload):
-    db.save_vehicle(owner_id=payload.owner_id,
-                    license_plate=payload.license_plate,
-                    model=payload.model,
-                    colour=payload.colour,
-                    vehicle_type=payload.type,
-                    phone=payload.phone,
-                    name=payload.name,)
+    db.save_vehicle(owner_id=payload.owner_id, license_plate=payload.license_plate,
+                    model=payload.model, colour=payload.colour,
+                    vehicle_type=payload.type, phone=payload.phone, name=payload.name,)
     return {"ok": True}
 
 @router.post("/api/entries")

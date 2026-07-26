@@ -1,9 +1,4 @@
-"""
-FastAPI app. Each route here corresponds to one entry in the
-"ENDPOINT CONTRACT" comment at the top of src/api/client.js in the
-frontend — path, method, and response shape are matched deliberately.
-
-Run with:  uvicorn main:app --reload --port 8000"""
+"""Run with:  uvicorn main:app --reload --port 8000"""
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware

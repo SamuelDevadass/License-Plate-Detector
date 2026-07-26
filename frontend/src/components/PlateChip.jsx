@@ -1,8 +1,3 @@
-/*
-  PlateChip renders a license plate number as an actual stenciled plate.
-  It's the one recurring visual idea this whole app is built around —
-  used on the detection screen, the owner form, entry/exit, and billing.
-*/
 export default function PlateChip({ value, size = "md" }) {
   const hasValue = value && value.trim().length > 0;
   const classes = ["plate-chip"];

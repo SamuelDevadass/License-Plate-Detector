@@ -21,14 +21,10 @@ export default function BillingPage({ data, goTo })
     <div className="panel">
       <h1 className="panel__title">Billing</h1>
       <PlateChip value={data.licensePlate} />
-
       {error && <div className="error-banner">{error}</div>}
-
-      {loading ? (
-        <p>Fetching bill…</p>
-      ) : !bill ? (
-        <div className="error-banner">No completed session found for this plate.</div>
-      ) : (
+      {loading ? ( <p>Fetching bill…</p> ) : 
+        !bill ? (<div className="error-banner">No completed session found for this plate.</div>) : 
+        (
         <div>
           <div className="bill-row">
             <span className="bill-row__label">Owner Name</span>
@@ -49,14 +45,11 @@ export default function BillingPage({ data, goTo })
           <div className="bill-total">₹{bill.amount}</div>
         </div>
       )}
-
       <div className="btn-row">
         <button className="btn btn--primary" onClick={() => window.print()}>
-          Print Bill
-        </button>
+          Print Bill </button>
         <button className="btn btn--ghost" onClick={() => goTo("spots")}>
-          Return Home
-        </button>
+          Return Home </button>
       </div>
     </div>
   );

@@ -1,11 +1,8 @@
 import { Fragment } from "react";
 
-/*
-  StepBar mirrors the page-flow of the original Tkinter app (each Frame was
-  a step the attendant moved through). The numbering is meaningful here —
-  it's a real sequence, not decoration — so numbered markers earn their
-  place.
-*/
+/* The numbering is meaningful here —
+  it's a real sequence, not decoration — so numbered markers earn their place.*/
+  
 const STEPS = [
   { key: "wing", label: "Wing" },
   { key: "spots", label: "Spots" },

@@ -1,18 +1,3 @@
-"""
-Wraps your Detector class (LicensePlateDetector.py) so it can run in a
-background thread and be polled over HTTP.
-
-This is the same shape as your Tkinter Detection_Page:
-  - a threading.Event to signal "stop"
-  - a background thread that does the slow camera/YOLO/OCR work
-  - somewhere to stash the result once it's done
-
-The only real difference: Tkinter polled a queue.Queue on the GUI thread via
-self.after(100, ...). Here, the frontend polls GET /api/detection/status
-over HTTP instead — same pattern, the queue is just replaced by a plain
-dict that both the worker thread and the route handler can see.
-"""
-
 import threading
 from LicensePlateDetector import Detector
 

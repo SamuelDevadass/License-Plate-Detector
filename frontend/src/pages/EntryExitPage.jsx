@@ -18,14 +18,14 @@ export default function EntryExitPage({ data, updateData, goTo })
       .catch((err) => setError(err.message));
   }
 
-  // on_show() equivalent: reset the selected spot and reload the list.
-  useEffect(() => { setSelectedKey("");
-                    updateData({ floor: null, spotNumber: null });
-                    loadSpots();
-                    if (data.licensePlate)
-                    {
-                      getSpot();
-                    }
+  useEffect(() => 
+  { setSelectedKey("");
+    updateData({ floor: null, spotNumber: null });
+    loadSpots();
+    if (data.licensePlate)
+    {
+      getSpot();
+    }
   }, [data.size, data.licensePlate],);
 
   function handleSelect(e) 
@@ -94,43 +94,38 @@ export default function EntryExitPage({ data, updateData, goTo })
     <div className="panel">
       <h1 className="panel__title">Mark Entry / Exit</h1>
       <PlateChip value={data.licensePlate} />
-      {error && <div className="error-banner">{error}</div>}
-      {message && <p className="panel__hint">{message}</p>}
-      <div className="field">
-        <label htmlFor="spot-select">Available Spots</label>
-        <select id="spot-select" value={occupiedSpot ? `occupied-${occupiedSpot}` : selectedKey}
-          onChange={handleSelect} disabled={!!occupiedSpot} >
-          {occupiedSpot && (<option value={`occupied-${occupiedSpot}`}>
-            </option>)}
-          <option value="" disabled>
-            {spots.length ? "Choose a spot…" : "No spots loaded — pick a vehicle type first"}
-          </option>
-          {spots.map((s) => (
-            <option key={`${s.floor}-${s.spot_number}`} value={`${s.floor}-${s.spot_number}`}>
-              Floor {s.floor} · Spot {s.spot_number} ({s.size})
-            </option>))}
-        </select>
-      </div>
-      <div className="btn-row">
-        <button className="btn btn--primary" onClick={markEntry} disabled={!selectedKey}>
-          Mark Entry
-        </button>
-        <button className="btn" onClick={markExit}>
-          Mark Exit
-        </button>
-      </div>
-      <div className="btn-row">
-        <button className="btn btn--ghost" onClick={() => goTo("billing")}>
-          Generate Bill
-        </button>
-        <button className="btn btn--ghost" onClick={() => goTo("spots")}>
-          Next Car
-        </button>
-        <button className="btn" disabled={!data.licensePlate} 
-          onClick={() => goTo("owner")}
-        > Edit Owner Details
-        </button>
-      </div>
+        {error && <div className="error-banner">{error}</div>}
+        {message && <p className="panel__hint">{message}</p>}
+        <div className="field">
+          <label htmlFor="spot-select">Available Spots</label>
+          <select id="spot-select" value={occupiedSpot? `occupied-${occupiedSpot}` : selectedKey}
+            onChange={handleSelect} disabled={!!occupiedSpot} >
+            {occupiedSpot && (<option value={`occupied-${occupiedSpot}`}>
+              Spot {occupiedSpot} (Currently Occupied)</option>)}
+            <option value="" disabled>
+              {spots.length ? "Choose a spot…" : "No spots loaded — pick a vehicle type first"}
+            </option>
+            {spots.map((s) => (
+              <option key={`${s.floor}-${s.spot_number}`} value={`${s.floor}-${s.spot_number}`}>
+                Floor {s.floor} · Spot {s.spot_number} ({s.size})
+              </option>))}
+          </select>
+        </div>
+        <div className="btn-row">
+          <button className="btn btn--primary" onClick={markEntry} disabled={!selectedKey}>
+            Mark Entry</button>
+          <button className="btn" onClick={markExit}>
+            Mark Exit</button>
+        </div>
+        <div className="btn-row">
+          <button className="btn btn--ghost" onClick={() => goTo("billing")}>
+            Generate Bill</button>
+          <button className="btn btn--ghost" onClick={() => goTo("spots")}>
+            Next Vehicle</button>
+          <button className="btn" disabled={!data.licensePlate} 
+            onClick={() => goTo("owner")}> 
+            Edit Owner Details</button>
+        </div>
     </div>
   );
 }

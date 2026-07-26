@@ -1,22 +1,5 @@
 # Smart Parking Management System with License Plate Detection
-
-## Project Evolution Roadmap
-
-| Phase 1 | Phase 2 | Phase 3 | Phase 4 | Phase 5 | Phase 6 | Phase 7 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ✓ <br> **Raspberry PI <br> version** | ✓ <br> **Local <br> Monolith** | ✓ <br> **Modular Local <br> Monolith** | ☑️ <br> **Application <br><br>** | ✅ <br> `Fullstack Web <br> Application` | ⬜ <br> Fullstack Web <br> with Go | ⬜ <br> Dockerized Web <br> Application |
-
-
-## Project Evolution Roadmap
-
-[![Completed](https://img.shields.io/badge/1._Raspberry_PI_Version-Completed-a5d6a7?style=for-the-badge&logoColor=white)](#) [![Completed](https://img.shields.io/badge/2._Local_Monolith-Completed-a5d6a7?style=for-the-badge&logoColor=white)](#) [![Completed](https://img.shields.io/badge/3._Modular_Local_Monolith-Completed-a5d6a7?style=for-the-badge&logoColor=white)](#)
-[![Current](https://img.shields.io/badge/4._Application-CURRENT_VERSION-2e7d32?style=for-the-badge&logoColor=white)](#)
-[![Upcoming](https://img.shields.io/badge/5._Fullstack_Web_Application-Upcoming-757575?style=for-the-badge&logoColor=white)](#) [![Upcoming](https://img.shields.io/badge/6._Fullstack_Web_with_Go-Upcoming-757575?style=for-the-badge&logoColor=white)](#) [![Upcoming](https://img.shields.io/badge/7._Dockerized_Web_Application-Upcoming-757575?style=for-the-badge&logoColor=white)](#)
-
-
-
-
-# 🗺️ Project Evolution Roadmap
+### Project Evolution Roadmap
 
 | Raspberry PI Version | Local Monolith | Modular Local Monolith | Application | Fullstack Web App | Fullstack Web App with Go | Dockerized Web App | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -26,7 +9,7 @@
 
 # FullStack Web Application
 
-STAND ALONE PROTOTYPE APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
+FULLSTACK WEB APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
 
 ### DATABASE
 
@@ -41,9 +24,9 @@ Designed to support organizations with multiple centres, wings, floors and spots
                 Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
 Supports comprehensive logging for robust performance
 
-### USER INTERFACE
+### FRONTEND
 
-Implemented using TKinter
+Implemented using React 
 
 Designed to support multiple pages dedicated to specific user activities
     
@@ -53,6 +36,12 @@ Designed to support multiple pages dedicated to specific user activities
         Mark Entry/Exit
         Generate Bill 
 Supports Interactive design for enhanced efficiency
+
+### BACKEND 
+
+Implemented using FastApi 
+
+Designed to support secure REST APIs for backend endpoints 
 
 ### AUTOMATIC LICENSE PLATE DETECTION
 
@@ -64,12 +53,16 @@ Includes automatic fallbacks with custom image enhancement pipeline against conf
 
 
 -----------------------------------------------------------------------------------------------------
+
 ## IMPROVEMENTS OVER APPLICATION
 
 i. Detection happens in the same window
 
 
 ii. Visual depiction of free and occupied spots
+
+
+iii. Occupied slot is pre selected while marking exit 
 
 
 -----------------------------------------------------------------------------------------------------
@@ -82,7 +75,7 @@ PostgreSQL, Psycopg, Tkinter, YOLO, EasyOCR, OpenCV, Pillow, RapidOCR
 
 #### CONFIGURATIONS
 
-    i. Folder Structure
+i. Folder Structure
     
     root/
     -   .env
