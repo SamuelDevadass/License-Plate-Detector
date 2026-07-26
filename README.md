@@ -125,7 +125,6 @@ i. Folder Structure
                 -   EntryExitPage.jsx
                 -   OwnerDetailsPage.jsx
                 -   SelectWingPage.jsx
-  
     +---backend/
         -   LicensePlateDetector.py
         -   schemas.py
@@ -151,7 +150,7 @@ i. Folder Structure
 
 ii. Environment Variables
     
-    Configure following DB variables to develop Psycopg connection string
+Configure following variables to configure the environment:
         
         DB_NAME = 
         DB_USER = 
@@ -163,6 +162,8 @@ ii. Environment Variables
 iii. Environment Setup
     
 -> Clone the repository/branch using command: 
+
+    https://github.com/SamuelDevadass/Smart-Parking-Management-System.git
     
 -> Create venv using command:
     
@@ -170,42 +171,54 @@ iii. Environment Setup
     
 -> Activate the venv
     
--> Install requirements using command:
+-> Navigate to backend and install requirements using command:
 
     pip install -r requirements.txt
 
-(Incase required, install other requirements from requirements.bak file)
-    
+  - (Incase required, install other requirements from requirements.bak file)
+
+-> Navigate to frontend and install requirements using command:
+
+    npm install
+
 -> Implement the DB using postgresql with the SQL from ./db/.sql
     
-Refer to diagrams in ./db and issues for detailed Schema and ER diagram
+   - Refer to diagrams in ./db and issues for detailed Schema and ER diagram
     
--> Run the application using the command python -m app_frontend.app
+-> Run the application:
+
+   - Navigate to the backend and run:
+
+    uvicorn main:app --reload --port 8000
+
+   - Navigate to the frontend and run:
+
+    npm run dev
 
 #### PRO TIPS
 
-    i. Ensure the .gitignore contains the lines:
+i. Ensure the .gitignore contains the lines:
 
         frame*.jpg
         202*/
         202*/*.jpg
       
-      This ensures the folders created during YOLO capture cycles are not tracked by Git
+This ensures the folders created during YOLO capture cycles are not tracked by Git
 
-    ii. venv startup:
+ii. venv startup:
     
         -> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Remote
     
         -> ./venv/scripts/Activate
 
-    iii. Pipreqs library 
+iii. Pipreqs library 
     
-         To add only those libraries actually imported in the files
-    
-         Command: pipreqs . --force
+To add only those libraries actually imported in the files run the command:
+
+    python -m pipreqs.pipreqs . --force
 
 # CITATION
 
 If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
 
-Citation: [Parking Management & License Number Detection / Application], Samuel (2026). Available at: [https://github.com/SamuelDevadass/License-Plate-Detector/tree/Application]
+Citation: [Smart Parking Management System / FullstackWebApplication], Samuel (2026). Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication]
