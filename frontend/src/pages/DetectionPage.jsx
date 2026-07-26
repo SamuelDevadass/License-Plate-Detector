@@ -75,8 +75,7 @@ export default function DetectionPage({ data, updateData, goTo })
     </div>
     <div className="field">
       <label>Live Camera Feed</label>
-      <img src="http://localhost:8000/api/video" 
-      alt={running ? "Live Detection Feed" : "Waiting for detection..."}
+      <img src="/api/video"  alt={running ? "Live Detection Feed" : "Waiting for detection..."}
         style={{ width: "100%", maxWidth: "640px", border: "1px solid #ccc",
           borderRadius: "8px", minHeight: "360px", objectFit: "contain",}}/>
       {!running && (

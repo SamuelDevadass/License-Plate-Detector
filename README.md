@@ -5,11 +5,27 @@
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
 
-
-
 # FullStack Web Application
 
 FULLSTACK WEB APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
+
+## FEATURED UPDATES
+
+GUI     : Tkinter --> React + Vite
+
+Backend : Python --> FastApi + Python
+
+-----------------------------------------------------------------------------------------------------
+
+## IMPROVEMENTS OVER APPLICATION
+
+i. Detection happens in the same window
+
+ii. Visual depiction of free and occupied spots
+
+iii. Occupied slot is pre selected while marking exit 
+
+-----------------------------------------------------------------------------------------------------
 
 ### DATABASE
 
@@ -43,6 +59,16 @@ Implemented using FastApi
 
 Designed to support secure REST APIs for backend endpoints 
 
+    Eg: /api/wings
+        /api/spots/
+        /api/detection/
+        /api/vehicles/
+        /api/entries/
+        /api/exits/
+        /api/bills/
+        /api/video/
+Supports Pydantic schemas for better security over HTTP messages
+
 ### AUTOMATIC LICENSE PLATE DETECTION
 
 Integrated YOLO_Monolith for Automatic License Number Detection
@@ -50,19 +76,6 @@ Integrated YOLO_Monolith for Automatic License Number Detection
 Implemented using YOLO, OpenCV, EasyOCR and Pillow
 
 Includes automatic fallbacks with custom image enhancement pipeline against confidence score checks
-
-
------------------------------------------------------------------------------------------------------
-
-## IMPROVEMENTS OVER APPLICATION
-
-i. Detection happens in the same window
-
-
-ii. Visual depiction of free and occupied spots
-
-
-iii. Occupied slot is pre selected while marking exit 
 
 
 -----------------------------------------------------------------------------------------------------
@@ -81,22 +94,62 @@ i. Folder Structure
     -   .env
     -   .gitignore
     -   README.md
+    -   LICENSE
     -   requirements.txt
     -   requirements.bak
     +---.vscode/
-    -       settings.json
-    +---app_frontend/
-        -   app.py
-        -   __init__.py
+           settings.json
+    +---frontend/
+        -   eslintconfig.js
+        -   index.html
+        -   package-lock.json
+        -   package.json
+        -   vite.config.js
+        +---node_modules/
+        +---public/
+            -   favicon.svg
+            -   icons.svg 
+        +---src/
+            -   App.jsx
+            -   index.css
+            -   main.jsx  
+            +---api/
+                -   client.js
+            +---components/
+                -   PlateChip.jsx
+                    StepBar.jsx       
+            +---pages/
+                -   BillingPage.jsx
+                -   DetectionPage.jsx
+                -   EmptySpotsPage.jsx
+                -   EntryExitPage.jsx
+                -   OwnerDetailsPage.jsx
+                -   SelectWingPage.jsx
+  
     +---backend/
         -   LicensePlateDetector.py
+        -   schemas.py
         -   yolo26n.pt
-        -   __init__.py
+        +---routers/
+            -   bills.py
+            -   detection.py
+            -   spots.py
+            -   vehicles_entry_exit.py
+            -   video.py
+            -   wings.py
+        +---scans/
+            -   <timestampted folders of captures>
+        +---services/
+            -   billing.py
+            -   db.py
+            -   detection.py
     +---db/
-    -       .sql
-    +---venv
+    -   .sql
+    -   ER DIAGRAM.jpg
+    -   FINAL SCHEMA (BCNF).png       
+    +---venv/
 
-    ii. Environment Variables
+ii. Environment Variables
     
     Configure following DB variables to develop Psycopg connection string
         
@@ -104,24 +157,30 @@ i. Folder Structure
         DB_USER = 
         DB_PW = 
         DB_HOST = 
+        FRONTEND_URL = 
+        VITE_BACKEND_URL = 
 
-    iii. Environment Setup
+iii. Environment Setup
     
-    -> Clone the repository/branch using command: 
+-> Clone the repository/branch using command: 
     
-    -> Create venv using command python -m create venv venv
+-> Create venv using command:
     
-    -> Activate the venv
+    python -m create venv venv
     
-    -> Install requirements using command pip install -r requirements.txt
+-> Activate the venv
     
-       (Incase required, install other requirements from requirements.bak file)
+-> Install requirements using command:
+
+    pip install -r requirements.txt
+
+(Incase required, install other requirements from requirements.bak file)
     
-    -> Implement the DB using postgresql with the SQL from ./db/.sql
+-> Implement the DB using postgresql with the SQL from ./db/.sql
     
-       Refer to diagrams in ./db and issues for detailed Schema and ER diagram
+Refer to diagrams in ./db and issues for detailed Schema and ER diagram
     
-    -> Run the application using the command python -m app_frontend.app
+-> Run the application using the command python -m app_frontend.app
 
 #### PRO TIPS
 
@@ -150,4 +209,3 @@ i. Folder Structure
 If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
 
 Citation: [Parking Management & License Number Detection / Application], Samuel (2026). Available at: [https://github.com/SamuelDevadass/License-Plate-Detector/tree/Application]
-
