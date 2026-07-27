@@ -11,7 +11,7 @@ STAND ALONE PROTOTYPE APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC P
 
 ## Video Walkthrough
 
-[![Watch the Demo Video](https://img.shields.io/badge/▶_Watch_Demo_Video_on_YouTube-Click_To_Play-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/-zj_sYQJUuc)
+[![Watch the Demo Video](https://markdown-videos-api.jorgenkh.no/youtube/-zj_sYQJUuc)](https://youtu.be/-zj_sYQJUuc)   
 
 ### DATABASE
 
