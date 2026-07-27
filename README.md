@@ -31,9 +31,6 @@ iii. Occupied slot is pre selected while marking exit
 
 -----------------------------------------------------------------------------------------------------
 
-## Video Walkthrough
-
-[![Watch the Demo Video](https://markdown-videos-api.jorgenkh.no/youtube/-zj_sYQJUuc)](https://youtu.be/-zj_sYQJUuc)   
 
 ### DATABASE
 
