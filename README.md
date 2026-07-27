@@ -9,6 +9,10 @@
 
 FULLSTACK WEB APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
 
+## Video Walkthrough
+
+[![Watch the Demo Video](https://markdown-videos-api.jorgenkh.no/youtube/7mYoQlRec2c)](https://youtu.be/7mYoQlRec2c)
+
 ## FEATURED UPDATES
 
 GUI     : Tkinter --> React + Vite
@@ -221,4 +225,6 @@ To add only those libraries actually imported in the files run the command:
 
 If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
 
-Citation: [Smart Parking Management System / FullstackWebApplication], Samuel (2026). Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication]
+Citation: [Smart Parking Management System / FullstackWebApplication], Samuel Devadass (2026). 
+
+Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication]
