@@ -1,6 +1,11 @@
-# APPLICATION
+# Smart Parking Management System with License Plate Detection
+### Project Evolution Roadmap
 
-## Parking Management System with License Plate Detection
+| Raspberry PI Version | Local Monolith | Modular Local Monolith | Application | Fullstack Web App | Fullstack Web App with Go | Dockerized Web App | 
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) |[![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
+
+# APPLICATION
 
 STAND ALONE PROTOTYPE APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
 
@@ -135,7 +140,9 @@ To add only those libraries actually imported in the files use:
 
 If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
 
-Citation: [Parking Management & License Number Detection / Application], Samuel (2026). Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System]
+Citation: [Smart Parking Management System / Application], Samuel (2026). 
+
+Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/Application]
 
 
     
