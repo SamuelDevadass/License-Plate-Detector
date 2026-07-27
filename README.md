@@ -31,6 +31,10 @@ iii. Occupied slot is pre selected while marking exit
 
 -----------------------------------------------------------------------------------------------------
 
+## Video Walkthrough
+
+[![Watch the Demo Video](https://markdown-videos-api.jorgenkh.no/youtube/-zj_sYQJUuc)](https://youtu.be/-zj_sYQJUuc)   
+
 ### DATABASE
 
 Implemented using PostGreSQL and Psycopg
@@ -40,8 +44,8 @@ Designed to support organizations with multiple centres, wings, floors and spots
     Eg: Organization Seasons Mall
             Centre: Seasons Mall Parking Centre
                 Wing:   Seasons Mall Parking Centre Wing 1
-                Floors: B1,B2,B3
-                Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
+                    Floors: B1,B2,B3
+                        Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
 Supports comprehensive logging for robust performance
 
 ### FRONTEND
@@ -223,7 +227,7 @@ To add only those libraries actually imported in the files run the command:
 
 # CITATION
 
-If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
+If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
 
 Citation: [Smart Parking Management System / FullstackWebApplication], Samuel Devadass (2026). 
 
