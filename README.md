@@ -19,9 +19,7 @@ Implemented using PostGreSQL and Psycopg
 
 Designed to support organizations with multiple centres, wings, floors and spots
     
-Eg:
-
-        Organization Seasons Mall
+    Eg: Organization Seasons Mall
             Centre: Seasons Mall Parking Centre
                 Wing:   Seasons Mall Parking Centre Wing 1
                     Floors: B1,B2,B3
@@ -34,13 +32,11 @@ Implemented using TKinter
 
 Designed to support multiple pages dedicated to specific user activities
     
-Eg: 
-    
-    Choose Wing
-    Automatic License Number Plate Detection
-    Input User Details
-    Mark Entry/Exit
-    Generate Bill 
+    Eg: Choose Wing
+        Automatic License Number Plate Detection
+        Input User Details
+        Mark Entry/Exit
+        Generate Bill 
 Supports Interactive design for enhanced efficiency
 
 ### AUTOMATIC LICENSE PLATE DETECTION
@@ -95,8 +91,12 @@ Configure following DB variables to develop Psycopg connection string
 iii. Environment Setup
     
 -> Clone the repository/branch using command: 
+
+    https://github.com/SamuelDevadass/Smart-Parking-Management-System.git
     
--> Create venv using command python -m create venv venv
+-> Create venv using command:
+    
+    python -m create venv venv
     
 -> Activate the venv
     
@@ -140,7 +140,7 @@ To add only those libraries actually imported in the files use:
 
 If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
 
-Citation: [Smart Parking Management System / Application], Samuel (2026). 
+Citation: [Smart Parking Management System / Application], Samuel Devadass (2026). 
 
 Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/Application]
 
