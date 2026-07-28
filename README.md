@@ -9,6 +9,11 @@
 
 FULLSTACK WEB APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
 
+### ARCHITECTURE DIAGRAM
+
+<img width="982" height="457" alt="image" src="https://github.com/user-attachments/assets/abb04c1d-6a95-4990-8ac3-594ddbcd18b9" />
+
+
 ## Video Walkthrough
 
 [![Watch the Demo Video](https://markdown-videos-api.jorgenkh.no/youtube/7mYoQlRec2c)](https://youtu.be/7mYoQlRec2c)
@@ -31,7 +36,6 @@ iii. Occupied slot is pre selected while marking exit
 
 -----------------------------------------------------------------------------------------------------
 
-
 ### DATABASE
 
 Implemented using PostGreSQL and Psycopg
@@ -41,8 +45,8 @@ Designed to support organizations with multiple centres, wings, floors and spots
     Eg: Organization Seasons Mall
             Centre: Seasons Mall Parking Centre
                 Wing:   Seasons Mall Parking Centre Wing 1
-                    Floors: B1,B2,B3
-                        Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
+                Floors: B1,B2,B3
+                Spots: Multiple spots for Two Wheelers and Four Wheelers Available per floor
 Supports comprehensive logging for robust performance
 
 ### FRONTEND
@@ -224,7 +228,7 @@ To add only those libraries actually imported in the files run the command:
 
 # CITATION
 
-If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
+If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
 
 Citation: [Smart Parking Management System / FullstackWebApplication], Samuel Devadass (2026). 
 
