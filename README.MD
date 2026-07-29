@@ -41,13 +41,10 @@ i. Folder Structure
     root/
     -   .gitignore
     -   README.md
-    -   LICENSE
-    -   requirements.txt
     +---.vscode/
            settings.json
-    +---backend/
-        -   LicensePlateDetector.py
-        -   yolo26n.pt   
+    -   LicensePlateDetector.py
+    -   yolo26n.pt   
     +---venv/
 
 
@@ -64,7 +61,7 @@ iii. Environment Setup
     
 -> Activate the venv
     
--> Navigate to backend and install requirements using command:
+-> Install requirements using command:
 
     pip install -r requirements.txt
 
@@ -75,7 +72,7 @@ iii. Environment Setup
 
    - Navigate to the backend and run:
 
-    uvicorn main:app --reload --port 8000
+    python -m 
 
    - Navigate to the frontend and run:
 
