@@ -172,7 +172,7 @@ iii. Environment Setup
     
 -> Clone the repository/branch using command: 
 
-    https://github.com/SamuelDevadass/Smart-Parking-Management-System.git
+    git clone -b FullstackWebApplication --single-branch https://github.com/SamuelDevadass/Smart-Parking-Management-System.git
     
 -> Create venv using command:
     
