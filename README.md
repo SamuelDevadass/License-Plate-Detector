@@ -5,9 +5,14 @@
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) |[![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
 
-# APPLICATION
+# Application
 
 STAND ALONE PROTOTYPE APPLICATION WITH FULLY FUNCTIONAL DATABASE AND AUTOMATIC PLATE DETECTION
+
+### ARCHITECTURE DIAGRAM
+
+<img width="867" height="436" alt="APPLICATION ARCHITECTURE DIAGRAM" src="https://github.com/user-attachments/assets/e82f00cc-a0d4-48bc-96f2-dbb8e16b0a73" />
+
 
 ## Video Walkthrough
 
