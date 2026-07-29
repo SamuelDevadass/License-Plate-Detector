@@ -228,7 +228,7 @@ To add only those libraries actually imported in the files run the command:
 
 # CITATION
 
-If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith
+If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
 
 Citation: [Smart Parking Management System / FullstackWebApplication], Samuel Devadass (2026). 
 
