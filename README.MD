@@ -3,7 +3,7 @@
 
 | Raspberry PI Version | Local Monolith | Modular Local Monolith | Application | Fullstack Web App | Fullstack Web App with Go | Dockerized Web App | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|  [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
+|  [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/PI-Version) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/Application) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
 
 # Modular Monolith
 
@@ -116,7 +116,7 @@ Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System
 
 | Raspberry PI Version | Local Monolith | Modular Local Monolith | Application | Fullstack Web App | Fullstack Web App with Go | Dockerized Web App | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|  [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#)  | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
+|  [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/PI-Version) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/Application) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |[![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
 
 # Local Monolith
 
@@ -130,12 +130,3 @@ Implemented YOLO_Monolith for Automatic License Number Detection
 Designed using YOLO, OpenCV, EasyOCR and Pillow
 
 Includes automatic fallbacks with custom image enhancement pipeline against confidence score checks
-
-# CITATION
-
-If you use this project, please credit https://github.com/SamuelDevadass/Smart-Parking-Management-System
-
-Citation: [Smart Parking Management System / LocalMonolith], Samuel Devadass (2026). 
-
-Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith]
-
