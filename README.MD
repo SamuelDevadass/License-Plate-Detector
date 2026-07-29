@@ -72,7 +72,7 @@ iii. Environment Setup
 
    - Navigate to the backend and run:
 
-    python -m 
+    python -m LicensePlateDetector.py
 
    - Navigate to the frontend and run:
 
@@ -104,6 +104,6 @@ To add only those libraries actually imported in the files run the command:
 
 If you use this project, please credit https://github.com/SamuelDevadass/License-Plate-Detector
 
-Citation: [Smart Parking Management System / FullstackWebApplication], Samuel Devadass (2026). 
+Citation: [Smart Parking Management System / LocalMonolith], Samuel Devadass (2026). 
 
-Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication]
+Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith]
