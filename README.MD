@@ -108,6 +108,9 @@ Citation: [Smart Parking Management System / LocalMonolith], Samuel Devadass (20
 
 Available at: [https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith]
 
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+
 # Smart Parking Management System with License Plate Detection
 ### Project Evolution Roadmap
 
