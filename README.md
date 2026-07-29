@@ -3,7 +3,7 @@
 
 | Raspberry PI Version | Local Monolith | Modular Local Monolith | Application | Fullstack Web App | Fullstack Web App with Go | Dockerized Web App | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](#) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
+| [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/PI-Version) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/LocalMonolith) | [![Completed](https://img.shields.io/badge/Completed-a5d6a7?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/Application) | [![Current](https://img.shields.io/badge/Current-2e7d32?style=for-the-badge)](https://github.com/SamuelDevadass/Smart-Parking-Management-System/tree/FullstackWebApplication) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) | [![Upcoming](https://img.shields.io/badge/Upcoming-757575?style=for-the-badge)](#) |
 
 # FullStack Web Application
 
@@ -93,7 +93,7 @@ Includes automatic fallbacks with custom image enhancement pipeline against conf
 
 #### Tools and Technologies
 
-PostgreSQL, Psycopg, Tkinter, YOLO, EasyOCR, OpenCV, Pillow, RapidOCR
+PostgreSQL, Psycopg, React, Vite, FastApi, YOLO, EasyOCR, OpenCV, Pillow, RapidOCR
 
 #### CONFIGURATIONS
 
